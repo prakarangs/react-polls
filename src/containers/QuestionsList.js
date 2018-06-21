@@ -4,7 +4,7 @@ import {fetchQuestions} from '../actions/api';
 
 class QuestionsList extends Component {
   componentDidMount() {
-
+    this.props.fetchQuestions();
   }
 
   render() {

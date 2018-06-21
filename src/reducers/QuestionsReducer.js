@@ -7,7 +7,7 @@ import {
 export function questions(state = {}, action) {
   switch (action.type) {
     case FETCH_QUESTIONS_SUCCESS:
-      return Object.assign({}, state, action);
+      return Object.assign({}, state, action.questions);
     default:
       return state;
   }
@@ -16,7 +16,7 @@ export function questions(state = {}, action) {
 export function questionsHaveError(state = false, action) {
   switch (action.type) {
     case QUESTIONS_HAVE_ERROR:
-      return action;
+      return action.hasError;
     default:
       return state;
   }
@@ -25,7 +25,7 @@ export function questionsHaveError(state = false, action) {
 export function questionsLoading(state = false, action) {
   switch (action.type) {
     case QUESTIONS_LOADING:
-      return action;
+      return action.isLoading;
     default:
       return state;
   }
