@@ -1,0 +1,46 @@
+.card {
+  border: 1px solid #c2c2c2;
+  border-radius: 6px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  min-height: 150px;
+  position: relative;
+  padding: 10px;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .card {
+      width: 31%; } }
+  .card .card_title {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 24px; }
+  .card .card_inner {
+    display: inline-block;
+    margin-right: 30px; }
+  .card .card_date {
+    color: #aaaaaa; }
+  .card .card_choices {
+    color: #ffad41;
+    font-weight: bold; }
+  .card .card_label {
+    color: #7a7a7a;
+    font-size: 12px;
+    font-weight: 600; }
+  .card .card_action a,
+  .card .card_action .btn {
+    width: 100%; }
+  .card .card_action .btn {
+    border: 0;
+    background-color: #5c74ff;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
+  .card .card_action .btn:hover {
+    background-color: #3351ff; }

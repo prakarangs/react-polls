@@ -5,6 +5,7 @@ import {fetchQuestions} from '../actions/api';
 import {Grid, Row, Col} from 'react-bootstrap';
 import QuestionItem from '../components/QuestionItem';
 import PropTypes from 'prop-types';
+import '../styles/list.css';
 
 class QuestionsList extends Component {
   componentDidMount() {
@@ -17,7 +18,12 @@ class QuestionsList extends Component {
     const questions = this.props.questions;
 
     return _.map(questions, (item, index) => {
-      return <QuestionItem key={index} title={item.question} published_at={item.published_at} choices={item.choices.length} url={item.url}/>;
+      return <QuestionItem
+        key={index}
+        title={item.question}
+        published_at={item.published_at}
+        choices={item.choices.length}
+        url={item.url}/>;
     });
   }
 
@@ -35,7 +41,7 @@ class QuestionsList extends Component {
         <header>
           <Grid>
             <Row>
-              <Col xs={12}>
+              <Col sm={12}>
                 <h1>Questions</h1>
               </Col>
             </Row>
@@ -44,7 +50,9 @@ class QuestionsList extends Component {
         <section>
           <Grid>
             <Row>
-              {this.renderList()}
+              <Col sm={12}>
+                <div className="container--list">{this.renderList()}</div>
+              </Col>
             </Row>
           </Grid>
         </section>
@@ -53,11 +61,8 @@ class QuestionsList extends Component {
   }
 }
 
-function mapStateToProps({ questions, questionsLoading }) {
-  return {
-    questions,
-    isLoading: questionsLoading
-  }
+function mapStateToProps({questions, questionsLoading}) {
+  return {questions, isLoading: questionsLoading}
 }
 
 QuestionsList.propTypes = {
