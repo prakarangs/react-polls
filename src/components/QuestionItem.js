@@ -9,9 +9,11 @@ const QuestionItem = ({title, published_at, choices, url}) => {
       <h3>{title}</h3>
       <p>Published at: {published_at}</p>
       <p>Choices: {choices}</p>
+      <Link to={`${url}`}>
       <Button bsSize="small">
-        <Link to={`${url}`}>Vote Now</Link>
+        Vote Now
       </Button>
+      </Link>
     </div>
   );
 }
