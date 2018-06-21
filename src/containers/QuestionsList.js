@@ -17,7 +17,7 @@ class QuestionsList extends Component {
     const questions = this.props.questions;
 
     return _.map(questions, (item, index) => {
-      return <QuestionItem key={index} title={item.question} published_at={item.published_at} choices={item.choices.length}/>;
+      return <QuestionItem key={index} title={item.question} published_at={item.published_at} choices={item.choices.length} url={item.url}/>;
     });
   }
 
