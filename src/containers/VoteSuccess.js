@@ -1,15 +1,17 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {Button} from 'react-bootstrap';
+import { Button, Alert } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import '../styles/confirmation.css';
 
 class VoteSuccess extends Component {
   render() {
     return (
-      <div>
-        You have successfully voted.
+      <div className="container_confirmation">
+      <Alert bsStyle="success"><p>You have successfully voted.</p>
+      </Alert>
         <Link to={`/questions/${this.props.match.params.questionId}`}>
-          <Button>
+          <Button bsStyle="info" bsSize="large">
             Go Back
           </Button>
         </Link>
@@ -17,5 +19,9 @@ class VoteSuccess extends Component {
     );
   }
 }
+
+VoteSuccess.propTypes = {
+  match: PropTypes.object.isRequired
+};
 
 export default VoteSuccess;
