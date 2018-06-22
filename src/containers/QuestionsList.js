@@ -42,7 +42,7 @@ class QuestionsList extends Component {
           <Grid>
             <Row>
               <Col sm={12}>
-                <h1>Questions</h1>
+                <h1>Questions Board</h1>
               </Col>
             </Row>
           </Grid>
@@ -67,6 +67,7 @@ function mapStateToProps({questions, questionsLoading}) {
 
 QuestionsList.propTypes = {
   isLoading: PropTypes.bool.isRequired,
+  questions: PropTypes.object.isRequired,
   fetchQuestions: PropTypes.func.isRequired
 };
 
