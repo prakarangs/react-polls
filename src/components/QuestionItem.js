@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {Button} from 'react-bootstrap';
 import Timestamp from 'react-timestamp';
-import PropTypes from 'prop-types';
 import '../styles/card.css';
 
 const QuestionItem = ({title, published_at, choices, url}) => {
