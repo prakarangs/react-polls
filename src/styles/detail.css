@@ -1,0 +1,61 @@
+.header_detail .cta_back {
+  display: block; }
+  @media (min-width: 768px) {
+    .header_detail .cta_back {
+      position: absolute;
+      top: 30px;
+      right: 15px; } }
+
+@media (min-width: 768px) {
+  .choices_wrapper {
+    display: flex;
+    justify-content: space-around; } }
+
+.choices_wrapper .choices_inner {
+  margin-right: 0;
+  margin-bottom: 5px; }
+  @media (min-width: 768px) {
+    .choices_wrapper .choices_inner {
+      margin-right: 40px; } }
+  .choices_wrapper .choices_inner h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400; }
+  .choices_wrapper .choices_inner small {
+    color: #7a7a7a;
+    font-weight: 600; }
+  .choices_wrapper .choices_inner strong {
+    color: #ffad41;
+    display: block; }
+  .choices_wrapper .choices_inner .progress {
+    width: 100%; }
+    @media (min-width: 768px) {
+      .choices_wrapper .choices_inner .progress {
+        width: 260px; } }
+
+@media (min-width: 768px) {
+  .choices_wrapper .choices_inner--title {
+    min-width: 220px; } }
+
+.choices_wrapper .choices_inner--progress {
+  margin-top: 10px;
+  margin-bottom: 0; }
+  .choices_wrapper .choices_inner--progress .progress-bar-info {
+    background-color: #5c74ff; }
+
+.choices_wrapper .choices_inner--percentage strong {
+  color: #5c74ff; }
+
+.choice--selected {
+  display: block;
+  font-size: 16px;
+  color: #7e91fc; }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.cta_submit--vote {
+  width: 150px;
+  float: right; }
