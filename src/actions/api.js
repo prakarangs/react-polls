@@ -30,7 +30,7 @@ export function questionsLoading(bool) {
   return {type: QUESTIONS_LOADING, isLoading: bool};
 }
 
-export function fetchSingleQuestion(id) {
+export function fetchSingleQuestion(id, callback) {
   let url = `${ROOT_URL}/questions/${id}`;
   let request = axios.get(url);
 
@@ -39,6 +39,7 @@ export function fetchSingleQuestion(id) {
     request.then(resp => {
       dispatch(fetchSingleQuestionSuccess(resp.data));
       dispatch(questionsLoading(false));
+      callback();
     }).catch(() => {
       dispatch(questionsHaveError(true));
     });
